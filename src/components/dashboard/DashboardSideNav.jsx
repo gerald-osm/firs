@@ -15,11 +15,10 @@ class UserDashBoardSideNavigation extends Component {
         <div className="dashboard_header text_color_black">
           <h6>
             {" "}
-            <button className="btn-lg" style={{ marginLeft: "40px" }}>
-              <Link to="/user-dashboard" style={{color:'black'}}>
+              <Link to="/user-dashboard" style={{color:'white', fontSize:'30px', margin: 'auto', paddingLeft:'20px'}}>
                 <i class="fas fa-tachometer-slowest" /> Dashboard{" "}
               </Link>
-            </button>
+           
           </h6>
         </div>
 
