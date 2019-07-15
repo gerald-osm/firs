@@ -1,0 +1,10 @@
+@keyframes search_input_glow {
+    from {
+        opacity: 0;
+    }
+
+    To {
+        opacity: 1;
+        width: 6px;
+    }
+}

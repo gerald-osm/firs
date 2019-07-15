@@ -1,0 +1,145 @@
+@media screen and (max-width: 480px) {
+    .page_logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_btns {
+        width: 100%;
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .footer_img_phone img {
+        /* margin-left: 30vw;
+        margin-right: auto; */
+        float: none;
+
+        justify-self: center;
+    }
+
+    .footer_app_ad {
+        padding: 30px !important;
+    }
+
+    .footer_app_ad h2 {
+        font-size: 35px !important;
+    }
+
+    .footer_app_ad h2:nth-child(odd) {
+        font-size: 30px !important;
+    }
+
+    .footer_app_ad h2:nth-child(2) {
+        width: 100%;
+    }
+
+    .footer_app_btn img {
+        width: 80%;
+        margin: 10px 10%;
+    }
+
+    .site_header {
+        padding: 70px 30px !important;
+    }
+
+    .home_footer {
+        padding-bottom: 30px !important;
+    }
+}
+
+/* @media screen and (max-width: 827px) and (min-width: 732px) {
+    
+} */
+
+/*  */
+
+/* Login Page */
+
+@media screen and (max-width: 480px) {
+    .page_desc h3 {
+        font-size: 23px;
+    }
+
+    .page_desc {
+        margin-top: 3vh;
+    }
+
+    .login_container {
+        width: 85% !important;
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+    }
+}
+
+ /*  */
+
+ /* Dasboard */
+
+@media screen and (max-width: 688px) and (min-width: 497px) {
+    .smart_card {
+        width: 70% !important;
+ }
+}
+
+@media screen and (max-width: 1300px) {
+    .dash_service h5 {
+        font-size: 10px;
+    }
+
+    .service_icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dash_service {
+        width: 80%;
+        margin: 10px 10%;
+        
+    }
+
+    .dash_service h5 {
+        font-size: 13px;
+    }
+
+    .service_name_event {
+        padding-left: 10px;
+    }
+
+    .service_icon img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .dash_head_service {
+        display: none;
+    }
+
+    .card_container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .py-5 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .menu_bar {
+        display: none;
+    }
+
+    .dash_head_service {
+        display: block;
+    }
+
+}
+
+
+
+ /*  */
