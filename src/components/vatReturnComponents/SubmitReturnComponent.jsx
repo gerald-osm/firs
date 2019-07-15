@@ -136,7 +136,7 @@ class SubmitReturn extends Component {
                   />
                 </td>
               </tr>
-              <tr>
+              {/* <tr>
                 <td colspan="12">
                   <input
                     style={{ width: "100%" }}
@@ -151,8 +151,8 @@ class SubmitReturn extends Component {
                     placeholder="TIN"
                   />
                 </td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <td colspan="12">
                   <input
                     style={{ width: "100%" }}
@@ -199,7 +199,7 @@ class SubmitReturn extends Component {
                     placeholder="Corporate Website"
                   />
                 </td>
-              </tr>
+              </tr> */}
               <tr>
                 <td colspan="20" />
               </tr>
