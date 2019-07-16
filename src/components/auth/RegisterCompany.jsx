@@ -25,21 +25,7 @@ class RegisterCompany extends Component {
                 <div
                   className="row"
                   style={{ fontSize: "25px", marginTop: "50px" }}
-                >
-                  
-                  {/* <div
-                    className="col-lg-4"
-                    style={{
-                      backgroundColor: "#a01b1f",
-                      borderRadius: "10px",
-                      textDecoration: "none",
-                      color: "black"
-                    }}
-                  >
-                    <Link to="/company">Company</Link>
-                  </div> */}
-                  
-                </div>
+                />
               </div>
             </div>
           </div>
@@ -47,7 +33,12 @@ class RegisterCompany extends Component {
             <div className=" col-sm-7 col-offset-5 rounded p-4 pb-5 mx-auto form_container">
               <div className="row">
                 <div className="col-sm-12 py-4">
-                  <img src={frsclogo} alt="" id="logoImage" />
+                  <img
+                    src={frsclogo}
+                    alt=""
+                    id="logoImage"
+                    style={{ width: "20%", marginLeft: "40%" }}
+                  />
                 </div>
               </div>
               <form>
@@ -89,9 +80,83 @@ class RegisterCompany extends Component {
                       </div>
                     </div>
                   </div>
-
+                  <div className="col-sm-6  form_input_container">
+                    <div className=" mb-4 custom_input_group">
+                      <label htmlFor="Email" className="form_label">
+                        {" "}
+                        Email adress{" "}
+                      </label>
+                      <div className="input-group mb-2">
+                        <input
+                          type="text"
+                          className="form-control"
+                          id=""
+                          placeholder=""
+                          name=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6  form_input_container">
+                    <div className=" mb-4 custom_input_group">
+                      <label htmlFor="Email" className="form_label">
+                        {" "}
+                        Phone Number{" "}
+                      </label>
+                      <div className="input-group mb-2">
+                        <input
+                          type="text"
+                          className="form-control"
+                          id=""
+                          placeholder=""
+                          name=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <div className="row" />
+
+                  <div className="col-sm-6  form_input_container">
+                    <div className=" mb-4 custom_input_group">
+                      <label htmlFor="Email" className="form_label">
+                        {" "}
+                        Password{" "}
+                      </label>
+                      <div className="input-group mb-2">
+                        <input
+                          type="text"
+                          className="form-control"
+                          id=""
+                          placeholder=""
+                          name=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-sm-6  form_input_container">
+                    <div className=" mb-4 custom_input_group">
+                      <label htmlFor="Email" className="form_label">
+                        {" "}
+                        Confirm Password{" "}
+                      </label>
+                      <div className="input-group mb-2">
+                        <input
+                          type="text"
+                          className="form-control"
+                          id=""
+                          placeholder=""
+                          name=""
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                {/* FFHFHFHFHHF */}
 
                 <div className="row">
                   <div className="col-sm-8 col-offset-4 mx-auto reg_btn">

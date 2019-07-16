@@ -12,8 +12,6 @@ class GuestNavigation extends Component {
   render() {
     const guestNavigation = (
       <div>
-       
-
         <nav className="navbar navbar-expand-lg navbar-light bg-light navbar justify-content-between custom_nav_style">
           <a className="navbar-brand" href="#">
             <img
@@ -35,18 +33,38 @@ class GuestNavigation extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
-          <div className="collapse navbar-collapse mr-5" id="navbarNav" style={{marginLeft:"50%"}}>
+          <div
+            className="collapse navbar-collapse mr-5"
+            id="navbarNav"
+            style={{ marginLeft: "50%" }}
+          >
             <ul className="navbar-nav">
-             
-
               <li className="nav-item">
                 <a className="nav-link" href="/user-login">
-                  <button className="btn btn-bg btn-dark">Login</button>
+                  <button
+                    style={{
+                      fontFamily: "calibri",
+                      fontSize: "17px",
+                      borderRadius: "20px"
+                    }}
+                    className="btn btn-bg btn-dark"
+                  >
+                    Login
+                  </button>
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/user-signup">
-                  <button className="btn btn-bg btn-secondary">signup</button>
+                  <button
+                    style={{
+                      fontFamily: "calibri",
+                      fontSize: "17px",
+                      borderRadius: "20px"
+                    }}
+                    className="btn btn-bg btn-secondary"
+                  >
+                    Signup
+                  </button>
                 </a>
               </li>
             </ul>

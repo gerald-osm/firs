@@ -1,142 +1,244 @@
 import React, { Component } from "react";
 import DashboardHeader from "../dashboard/Dashboardheader";
+import $ from "jquery";
 // import FooterBar from "../commons/Footer";
 
 class SubmitReturn extends Component {
+  componentDidMount(){
+      $(document).ready(function() {
+        $("button").click(function() {
+          $("#div1").fadeOut();
+          $("#div2").fadeOut("slow");
+          $("#div3").fadeOut(3000);
+        });
+      });
+  }
   render() {
     const SubmitReturn = (
-      <div
-        className="container-fluid"
-        style={{ marginRight: "50px", height: "100vh" }}
-      >
+      <React.Fragment>
+        {/* MODAL */}
         <div
-          className="text-center"
-          style={{ border: "1px solid", padding: "5px" }}
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
         >
-          VALUE ADDED TAX RETURN FORM
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Pay with Card or Account
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                 
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  // data-toggle="modal"
+                  // data-target="#exampleModal"
+                >
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <form action="#">
-          <table class="table table-bordered" style={{ border: "5px" }}>
-            <thead />
-            <tbody>
-              <tr>
-                <td style={{ width: "16%" }}>Return covers</td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-                <td style={{}}>Begin</td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="D"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="D"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-                <td style={{}}>Ending</td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="D"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="D"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="M"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-                <td style={{ width: "5%" }}>
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="Y"
-                  />
-                </td>
-              </tr>
-              {/* <tr>
+
+        {/* SECOND MODAL */}
+
+        {/* Modal  */}
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Second modal
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* MODAL END */}
+        <div
+          className="container-fluid"
+          style={{ marginRight: "50px", height: "100vh" }}
+        >
+          <div
+            className="text-center"
+            style={{ border: "1px solid", padding: "5px" }}
+          >
+            VALUE ADDED TAX RETURN FORM
+          </div>
+          <form action="#">
+            <table class="table table-bordered" style={{ border: "5px" }}>
+              <thead />
+              <tbody>
+                <tr>
+                  <td style={{ width: "16%" }}>Return covers</td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                  <td style={{}}>Begin</td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="D"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="D"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                  <td style={{}}>Ending</td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="D"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="D"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="M"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                  <td style={{ width: "5%" }}>
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="Y"
+                    />
+                  </td>
+                </tr>
+                {/* <tr>
                 <td colspan="12">
                   <input
                     style={{ width: "100%" }}
@@ -152,7 +254,7 @@ class SubmitReturn extends Component {
                   />
                 </td>
               </tr> */}
-              {/* <tr>
+                {/* <tr>
                 <td colspan="12">
                   <input
                     style={{ width: "100%" }}
@@ -200,542 +302,545 @@ class SubmitReturn extends Component {
                   />
                 </td>
               </tr> */}
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="10" />
-                <td colspan="2">Currency</td>
-                <td colspan="2">NAIRA</td>
-                <td colspan="2">USD</td>
-                <td colspan="2">GBP</td>
-                <td colspan="2">EURO</td>
-              </tr>
-              <tr>
-                <td colspan="1">LINE #</td>
-                <td colspan="11">A-SALES/INCOME</td>
-                <td colspan="3">Notes</td>
-                <td colspan="5">Amount</td>
-              </tr>
-              <tr>
-                <td colspan="1">10</td>
-                <td colspan="11">Total Sales/Income Exclusive of VAT</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">15</td>
-                <td colspan="11">
-                  Less: Goods and Services Exempted included in Line 10
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">20</td>
-                <td colspan="11">
-                  Less: Zero rated Goods and Services included in Line 10
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">22</td>
-                <td colspan="11">Sales adjustments</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">25</td>
-                <td colspan="11">Sales/Income Subject to VAT</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1" style={{ fontWeight: "bold" }}>
-                  35
-                </td>
-                <td colspan="11" style={{ fontWeight: "bold" }}>
-                  TOTAL OUTPUT TAX
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1" />
-                <td colspan="11" style={{ fontWeight: "bold" }}>
-                  B-PURCHASES EXPENSES
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">40</td>
-                <td colspan="11">
-                  Domestic Purchases used for sales other than Zero rated
-                  and Exempted Goods and services
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">45</td>
-                <td colspan="11">
-                  Purchases not wholly used in making VATable Supplies
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">55</td>
-                <td colspan="11">
-                  VAT suffered on VATable Domestic Supplies
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">60</td>
-                <td colspan="11">
-                  Domestic Purchases for Zero Rated Sales
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">65</td>
-                <td colspan="11">
-                  Purchases not wholly used in making VATable Supplies
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">75</td>
-                <td colspan="11">VAT suffered on Zero-rated Supplies</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">85</td>
-                <td colspan="11">Purchased Imports</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">90</td>
-                <td colspan="11">
-                  Total Purchases Subject to VAT Incurred
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1" style={{ fontWeight: "bold" }}>
-                  95
-                </td>
-                <td colspan="11" style={{ fontWeight: "bold" }}>
-                  TOTAL OUTPUT TAX
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1" style={{ fontWeight: "bold" }}>
-                  100
-                </td>
-                <td colspan="11" style={{ fontWeight: "bold" }}>
-                  VAT Balance for Current Period
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td colspan="10" />
+                  <td colspan="2">Currency</td>
+                  <td colspan="2">NAIRA</td>
+                  <td colspan="2">USD</td>
+                  <td colspan="2">GBP</td>
+                  <td colspan="2">EURO</td>
+                </tr>
+                <tr>
+                  <td colspan="1">LINE #</td>
+                  <td colspan="11">A-SALES/INCOME</td>
+                  <td colspan="3">Notes</td>
+                  <td colspan="5">Amount</td>
+                </tr>
+                <tr>
+                  <td colspan="1">10</td>
+                  <td colspan="11">Total Sales/Income Exclusive of VAT</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">15</td>
+                  <td colspan="11">
+                    Less: Goods and Services Exempted included in Line 10
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">20</td>
+                  <td colspan="11">
+                    Less: Zero rated Goods and Services included in Line 10
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">22</td>
+                  <td colspan="11">Sales adjustments</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">25</td>
+                  <td colspan="11">Sales/Income Subject to VAT</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                    35
+                  </td>
+                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                    TOTAL OUTPUT TAX
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" />
+                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                    B-PURCHASES EXPENSES
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">40</td>
+                  <td colspan="11">
+                    Domestic Purchases used for sales other than Zero rated
+                    and Exempted Goods and services
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">45</td>
+                  <td colspan="11">
+                    Purchases not wholly used in making VATable Supplies
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">55</td>
+                  <td colspan="11">
+                    VAT suffered on VATable Domestic Supplies
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">60</td>
+                  <td colspan="11">
+                    Domestic Purchases for Zero Rated Sales
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">65</td>
+                  <td colspan="11">
+                    Purchases not wholly used in making VATable Supplies
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">75</td>
+                  <td colspan="11">VAT suffered on Zero-rated Supplies</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">85</td>
+                  <td colspan="11">Purchased Imports</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">90</td>
+                  <td colspan="11">
+                    Total Purchases Subject to VAT Incurred
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                    95
+                  </td>
+                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                    TOTAL OUTPUT TAX
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                    100
+                  </td>
+                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                    VAT Balance for Current Period
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
 
-              <tr>
-                <td colspan="1">105</td>
-                <td colspan="11">
-                  Input Tax on VAT Withheld by MDAs & Oil and Gas
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">110</td>
-                <td colspan="11">
-                  Automatic VAT payment in Current Period
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
+                <tr>
+                  <td colspan="1">105</td>
+                  <td colspan="11">
+                    Input Tax on VAT Withheld by MDAs & Oil and Gas
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">110</td>
+                  <td colspan="11">
+                    Automatic VAT payment in Current Period
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
 
-              <tr>
-                <td colspan="1">115</td>
-                <td colspan="11">Net VAT Balance for Current Period</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">120</td>
-                <td colspan="11">VAT credit brought forward</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">130</td>
-                <td colspan="11">VAT credit for the Current Period</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
+                <tr>
+                  <td colspan="1">115</td>
+                  <td colspan="11">Net VAT Balance for Current Period</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">120</td>
+                  <td colspan="11">VAT credit brought forward</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">130</td>
+                  <td colspan="11">VAT credit for the Current Period</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
 
-              <tr>
-                <td colspan="1">135</td>
-                <td colspan="11">Total VAT credit</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1">140</td>
-                <td colspan="11">Relieved VAT credit</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
+                <tr>
+                  <td colspan="1">135</td>
+                  <td colspan="11">Total VAT credit</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1">140</td>
+                  <td colspan="11">Relieved VAT credit</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
 
-              <tr>
-                <td colspan="1">145</td>
-                <td colspan="11">VAT credit brought forward</td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="1" style={{ fontWeight: "bold" }}>
-                  150
-                </td>
-                <td colspan="11" style={{ fontWeight: "bold" }}>
-                  VAT payable
-                </td>
-                <td colspan="3">
-                  <input style={{ width: "100%" }} type="text" />
-                </td>
-                <td colspan="5">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="00.00"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td
-                  className="text-center"
-                  style={{ fontWeight: "bold" }}
-                  colspan="20"
-                >
-                  Note: LATE FILING & PAYMENT SHALL BE PENALISED
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="20">
-                  {" "}
-                  <span style={{ fontWeight: "bold" }}>DECLARATION:</span> I
-                  declare that the particulars in this return are correct
-                  and complete in accordance with the provisions of Value
-                  Added Tax CAP VI LFN, 2004 as amended
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="9">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="FULLNAME"
-                  />
-                </td>
-                <td colspan="1" />
-                <td colspan="9">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="DESIGNATION"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="9">SIGNATURE</td>
-                <td colspan="1" />
-                <td colspan="9">
-                  <input
-                    style={{ width: "100%" }}
-                    type="date"
-                    placeholder="DATE"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td className="text-center" colspan="20">
-                  {" "}
-                  <span style={{ fontWeight: "bold" }}>
-                    FOR FIRS USE ONLY
-                  </span>{" "}
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="4">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="NAME"
-                  />
-                </td>
-                <td colspan="4">
-                  <input
-                    style={{ width: "100%" }}
-                    type="text"
-                    placeholder="IR NO"
-                  />
-                </td>
-                <td colspan="4">SIGNED:</td>
-                <td colspan="2" />
-                <td colspan="6">
-                  <input style={{ width: "100%" }} type="DATE" />
-                </td>
-              </tr>
-              <tr>
-                <td colspan="20" />
-              </tr>
-              <tr>
-                <td colspan="20" className="text-center">
-                  <button
-                    type="button"
-                    className="btn btn-success btn-block"
+                <tr>
+                  <td colspan="1">145</td>
+                  <td colspan="11">VAT credit brought forward</td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                    150
+                  </td>
+                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                    VAT payable
+                  </td>
+                  <td colspan="3">
+                    <input style={{ width: "100%" }} type="text" />
+                  </td>
+                  <td colspan="5">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="00.00"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td
+                    className="text-center"
+                    style={{ fontWeight: "bold" }}
+                    colspan="20"
                   >
-                    Submit
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-      </div>
-
-      
+                    Note: LATE FILING & PAYMENT SHALL BE PENALISED
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td colspan="20">
+                    {" "}
+                    <span style={{ fontWeight: "bold" }}>
+                      DECLARATION:
+                    </span>{" "}
+                    I declare that the particulars in this return are
+                    correct and complete in accordance with the provisions
+                    of Value Added Tax CAP VI LFN, 2004 as amended
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                {/* <tr>
+                  <td colspan="9">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="FULLNAME"
+                    />
+                  </td>
+                  <td colspan="1" />
+                  <td colspan="9">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="DESIGNATION"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td colspan="9">SIGNATURE</td>
+                  <td colspan="1" />
+                  <td colspan="9">
+                    <input
+                      style={{ width: "100%" }}
+                      type="date"
+                      placeholder="DATE"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td className="text-center" colspan="20">
+                    {" "}
+                    <span style={{ fontWeight: "bold" }}>
+                      FOR FIRS USE ONLY
+                    </span>{" "}
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="NAME"
+                    />
+                  </td>
+                  <td colspan="4">
+                    <input
+                      style={{ width: "100%" }}
+                      type="text"
+                      placeholder="IR NO"
+                    />
+                  </td>
+                  <td colspan="4">SIGNED:</td>
+                  <td colspan="2" />
+                  <td colspan="6">
+                    <input style={{ width: "100%" }} type="DATE" />
+                  </td>
+                </tr> */}
+                <tr>
+                  <td colspan="20" />
+                </tr>
+                <tr>
+                  <td colspan="20" className="text-center">
+                    <button
+                      type="button"
+                      className="btn btn-success btn-block"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                    >
+                      Submit
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </React.Fragment>
     );
     return (
       <div id="content">

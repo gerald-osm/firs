@@ -32,7 +32,16 @@ const DashboardHeader = () => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" href="/">
-              <button className="btn btn-bg btn-secondary">Logout</button>
+              <button
+                style={{
+                  fontFamily: "calibri",
+                  fontSize: "17px",
+                  borderRadius: "20px"
+                }}
+                className="btn btn-bg btn-secondary"
+              >
+                Logout
+              </button>
             </a>
           </li>
         </ul>
