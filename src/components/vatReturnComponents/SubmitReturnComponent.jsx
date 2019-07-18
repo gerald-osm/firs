@@ -10,15 +10,23 @@ class SubmitReturn extends Component {
     open: false
   };
 
-  onOpenModal = () => {
+  onOpenModal = (ev) => {
+       ev.preventDefault(ev);
     this.setState({ open: true });
+       
+
   };
 
   onCloseModal = () => {
     this.setState({ open: false });
   };
+
+stopDefault = (ev)=>{
+
+}
+ 
   render() {
-        const { open } = this.state;
+    const { open } = this.state;
 
     const SubmitReturn = (
       <React.Fragment>
@@ -538,8 +546,8 @@ class SubmitReturn extends Component {
                     }}
                     colspan="11"
                   >
-                    Domestic Purchases used for sales other than Zero rated
-                    and Exempted Goods and services
+                    Domestic Purchases used for sales other than Zero rated and
+                    Exempted Goods and services
                   </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
@@ -1089,9 +1097,9 @@ class SubmitReturn extends Component {
                         fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
                       }}
                     >
-                      I declare that the particulars in this return are
-                      correct and complete in accordance with the provisions
-                      of Value Added Tax CAP VI LFN, 2004 as amended.{" "}
+                      I declare that the particulars in this return are correct
+                      and complete in accordance with the provisions of Value
+                      Added Tax CAP VI LFN, 2004 as amended.{" "}
                     </span>
                   </td>
                 </tr>
@@ -1170,14 +1178,16 @@ class SubmitReturn extends Component {
                 <tr>
                   <td colspan="20" className="text-center">
                     {" "}
-                    <button onClick={this.onOpenModal} className= 'btn btn-secondary btn-block'>Submit</button>
+                    <button
+                      onClick={this.onOpenModal} 
+                      className="btn btn-secondary btn-block"
+                    >
+                      Submit
+                    </button>
                     {/* MODALS */}
                     <div>
                       <Modal open={open} onClose={this.onCloseModal} center>
-                        <div
-                          className="container"
-                          style={{ padding: "60px" }}
-                        >
+                        <div className="container" style={{ padding: "60px" }}>
                           <h2>
                             Pay by{" "}
                             <Link to="/card" style={{ color: "blue" }}>
