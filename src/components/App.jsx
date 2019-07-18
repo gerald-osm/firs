@@ -9,8 +9,9 @@ import Dashboard from './dashboard/Dashboard';
 import SubmitReturn from '../components/vatReturnComponents/SubmitReturn';
 import PastSubmissions from '../components/vatReturnComponents/PastSubmissions'
 import Liabilites from "../components/vatReturnComponents/Liabilities";
-import Payment from '../components/vatReturnComponents/Payment'
-
+import Payment from '../components/vatReturnComponents/Payment';
+import Card from '../components/payments/Card';
+import Account from "../components/payments/Account";
 import PaymentMethod from './payments/PaymentMethod';
 import RecuringPayment from './payments/RecuringPayment';
 import OtpPage from './auth/OtpPage';
@@ -40,7 +41,8 @@ class App extends React.Component {
               component={RequestPasswordChange}
             />
             <Route exact path="/user-dashboard" component={Dashboard} />
-            <Route exact path="/payment" component={PaymentMethod} />
+            <Route exact path="/card" component={Card} />
+            <Route exact path="/account" component={Account} />
             <Route
               exact
               path="/recuring-payment"

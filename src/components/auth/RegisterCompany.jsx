@@ -19,7 +19,13 @@ class RegisterCompany extends Component {
             <div className="row">
               <div className=" col-sm-4 col-offset-8 rounded p-4 mx-auto text-center page_desc">
                 <h3>
-                  <small>Create your VAT account</small>
+                  <small
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                  >
+                    Create your VAT account
+                  </small>
                 </h3>
 
                 <div
@@ -157,7 +163,17 @@ class RegisterCompany extends Component {
                 </div>
 
                 {/* FFHFHFHFHHF */}
-
+                <div className=" mb-4 mt-4 custom_input_group">
+                  <select class="custom-select">
+                    <option selected>MSTO</option>
+                    <option value="1">Victoria Island</option>
+                    <option value="2">Lekki</option>
+                    <option value="3">Ikeja</option>
+                    <option value="1"> Maryland</option>
+                    <option value="2">Ajah</option>
+                    <option value="3">Isolo</option>
+                  </select>
+                </div>
                 <div className="row">
                   <div className="col-sm-8 col-offset-4 mx-auto reg_btn">
                     <Link to="/user-dashboard">

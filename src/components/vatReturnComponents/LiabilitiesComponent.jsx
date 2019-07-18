@@ -5,7 +5,7 @@ import DashboardHeader from "../dashboard/Dashboardheader";
 class LiabilitiesComponent extends Component {
   render() {
      const PsC = (
-       <div class="container" style={{ height: "75vh" }}>
+       <div class="container" style={{fontFamily: "Verdana, Geneva, Tahoma, sans-serif", height: "75vh" }}>
          <h4 className="text-center">Your VAT liabilities</h4>
          <div className="row" style={{ marginTop: "20px" }}>
            <div className="col-sm">Tax Period</div>

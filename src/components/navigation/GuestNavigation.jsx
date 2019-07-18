@@ -43,7 +43,7 @@ class GuestNavigation extends Component {
                 <a className="nav-link" href="/user-login">
                   <button
                     style={{
-                      fontFamily: "calibri",
+                      fontFamily: "Verdana",
                       fontSize: "17px",
                       borderRadius: "20px"
                     }}
@@ -57,7 +57,7 @@ class GuestNavigation extends Component {
                 <a className="nav-link" href="/user-signup">
                   <button
                     style={{
-                      fontFamily: "calibri",
+                      fontFamily: "Verdana",
                       fontSize: "17px",
                       borderRadius: "20px"
                     }}

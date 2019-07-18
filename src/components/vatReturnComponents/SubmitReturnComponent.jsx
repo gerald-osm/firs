@@ -1,119 +1,41 @@
 import React, { Component } from "react";
 import DashboardHeader from "../dashboard/Dashboardheader";
-import $ from "jquery";
+import Modal from "react-responsive-modal";
+
+import {Link} from 'react-router-dom'
 // import FooterBar from "../commons/Footer";
 
 class SubmitReturn extends Component {
-  componentDidMount(){
-      $(document).ready(function() {
-        $("button").click(function() {
-          $("#div1").fadeOut();
-          $("#div2").fadeOut("slow");
-          $("#div3").fadeOut(3000);
-        });
-      });
-  }
+  state = {
+    open: false
+  };
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
   render() {
+        const { open } = this.state;
+
     const SubmitReturn = (
       <React.Fragment>
-        {/* MODAL */}
-        <div
-          class="modal fade"
-          id="exampleModalCenter"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalCenterTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
-                  Pay with Card or Account
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                 
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  // data-toggle="modal"
-                  // data-target="#exampleModal"
-                >
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* SECOND MODAL */}
-
-        {/* Modal  */}
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Second modal
-                </h5>
-                <button
-                  type="button"
-                  class="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* MODAL END */}
         <div
           className="container-fluid"
-          style={{ marginRight: "50px", height: "100vh" }}
+          style={{
+            marginRight: "50px",
+            height: "100vh"
+          }}
         >
           <div
             className="text-center"
-            style={{ border: "1px solid", padding: "5px" }}
+            style={{
+              border: "1px solid",
+              padding: "5px",
+              fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+            }}
           >
             VALUE ADDED TAX RETURN FORM
           </div>
@@ -122,7 +44,14 @@ class SubmitReturn extends Component {
               <thead />
               <tbody>
                 <tr>
-                  <td style={{ width: "16%" }}>Return covers</td>
+                  <td
+                    style={{
+                      width: "16%",
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                  >
+                    Return covers
+                  </td>
                   <td style={{ width: "5%" }}>
                     <input
                       style={{ width: "100%" }}
@@ -151,7 +80,13 @@ class SubmitReturn extends Component {
                       placeholder="Y"
                     />
                   </td>
-                  <td style={{}}>Begin</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                  >
+                    Begin
+                  </td>
                   <td style={{ width: "5%" }}>
                     <input
                       style={{ width: "100%" }}
@@ -194,7 +129,13 @@ class SubmitReturn extends Component {
                       placeholder="Y"
                     />
                   </td>
-                  <td style={{}}>Ending</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                  >
+                    Ending
+                  </td>
                   <td style={{ width: "5%" }}>
                     <input
                       style={{ width: "100%" }}
@@ -305,23 +246,108 @@ class SubmitReturn extends Component {
                 <tr>
                   <td colspan="20" />
                 </tr>
-                <tr>
+                <tr
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                  }}
+                >
                   <td colspan="10" />
-                  <td colspan="2">Currency</td>
-                  <td colspan="2">NAIRA</td>
-                  <td colspan="2">USD</td>
-                  <td colspan="2">GBP</td>
-                  <td colspan="2">EURO</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="2"
+                  >
+                    Currency
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="2"
+                  >
+                    NAIRA
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="2"
+                  >
+                    USD
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="2"
+                  >
+                    GBP
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="2"
+                  >
+                    EURO
+                  </td>
+                </tr>
+                <tr
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                  }}
+                >
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    LINE #
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    A-SALES/INCOME
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="3"
+                  >
+                    Notes
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="5"
+                  >
+                    Amount
+                  </td>
                 </tr>
                 <tr>
-                  <td colspan="1">LINE #</td>
-                  <td colspan="11">A-SALES/INCOME</td>
-                  <td colspan="3">Notes</td>
-                  <td colspan="5">Amount</td>
-                </tr>
-                <tr>
-                  <td colspan="1">10</td>
-                  <td colspan="11">Total Sales/Income Exclusive of VAT</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    10
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Total Sales/Income Exclusive of VAT
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -334,8 +360,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">15</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    15
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Less: Goods and Services Exempted included in Line 10
                   </td>
                   <td colspan="3">
@@ -350,8 +388,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">20</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    20
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Less: Zero rated Goods and Services included in Line 10
                   </td>
                   <td colspan="3">
@@ -366,8 +416,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">22</td>
-                  <td colspan="11">Sales adjustments</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    22
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Sales adjustments
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -380,8 +444,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">25</td>
-                  <td colspan="11">Sales/Income Subject to VAT</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    25
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Sales/Income Subject to VAT
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -394,10 +472,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                    colspan="1"
+                  >
                     35
                   </td>
-                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                    colspan="11"
+                  >
                     TOTAL OUTPUT TAX
                   </td>
                   <td colspan="3">
@@ -413,7 +503,13 @@ class SubmitReturn extends Component {
                 </tr>
                 <tr>
                   <td colspan="1" />
-                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="11"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     B-PURCHASES EXPENSES
                   </td>
                   <td colspan="3">
@@ -428,8 +524,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">40</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    40
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Domestic Purchases used for sales other than Zero rated
                     and Exempted Goods and services
                   </td>
@@ -445,8 +553,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">45</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    45
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Purchases not wholly used in making VATable Supplies
                   </td>
                   <td colspan="3">
@@ -461,8 +581,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">55</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    55
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     VAT suffered on VATable Domestic Supplies
                   </td>
                   <td colspan="3">
@@ -477,8 +609,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">60</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    60
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Domestic Purchases for Zero Rated Sales
                   </td>
                   <td colspan="3">
@@ -493,8 +637,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">65</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    65
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Purchases not wholly used in making VATable Supplies
                   </td>
                   <td colspan="3">
@@ -509,8 +665,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">75</td>
-                  <td colspan="11">VAT suffered on Zero-rated Supplies</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    75
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    VAT suffered on Zero-rated Supplies
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -523,8 +693,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">85</td>
-                  <td colspan="11">Purchased Imports</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    85
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Purchased Imports
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -537,8 +721,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">90</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    90
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Total Purchases Subject to VAT Incurred
                   </td>
                   <td colspan="3">
@@ -553,10 +749,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="1"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     95
                   </td>
-                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="11"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     TOTAL OUTPUT TAX
                   </td>
                   <td colspan="3">
@@ -571,10 +779,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="1"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     100
                   </td>
-                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="11"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     VAT Balance for Current Period
                   </td>
                   <td colspan="3">
@@ -590,8 +810,20 @@ class SubmitReturn extends Component {
                 </tr>
 
                 <tr>
-                  <td colspan="1">105</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    105
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Input Tax on VAT Withheld by MDAs & Oil and Gas
                   </td>
                   <td colspan="3">
@@ -606,8 +838,20 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">110</td>
-                  <td colspan="11">
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    110
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
                     Automatic VAT payment in Current Period
                   </td>
                   <td colspan="3">
@@ -623,8 +867,22 @@ class SubmitReturn extends Component {
                 </tr>
 
                 <tr>
-                  <td colspan="1">115</td>
-                  <td colspan="11">Net VAT Balance for Current Period</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    115
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Net VAT Balance for Current Period
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -637,8 +895,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">120</td>
-                  <td colspan="11">VAT credit brought forward</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    120
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    VAT credit brought forward
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -651,8 +923,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">130</td>
-                  <td colspan="11">VAT credit for the Current Period</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    130
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    VAT credit for the Current Period
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -666,8 +952,22 @@ class SubmitReturn extends Component {
                 </tr>
 
                 <tr>
-                  <td colspan="1">135</td>
-                  <td colspan="11">Total VAT credit</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    135
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Total VAT credit
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -680,8 +980,22 @@ class SubmitReturn extends Component {
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="1">140</td>
-                  <td colspan="11">Relieved VAT credit</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    140
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    Relieved VAT credit
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -695,8 +1009,22 @@ class SubmitReturn extends Component {
                 </tr>
 
                 <tr>
-                  <td colspan="1">145</td>
-                  <td colspan="11">VAT credit brought forward</td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="1"
+                  >
+                    145
+                  </td>
+                  <td
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                    colspan="11"
+                  >
+                    VAT credit brought forward
+                  </td>
                   <td colspan="3">
                     <input style={{ width: "100%" }} type="text" />
                   </td>
@@ -712,7 +1040,13 @@ class SubmitReturn extends Component {
                   <td colspan="1" style={{ fontWeight: "bold" }}>
                     150
                   </td>
-                  <td colspan="11" style={{ fontWeight: "bold" }}>
+                  <td
+                    colspan="11"
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
+                  >
                     VAT payable
                   </td>
                   <td colspan="3">
@@ -732,7 +1066,10 @@ class SubmitReturn extends Component {
                 <tr>
                   <td
                     className="text-center"
-                    style={{ fontWeight: "bold" }}
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      fontWeight: "bold"
+                    }}
                     colspan="20"
                   >
                     Note: LATE FILING & PAYMENT SHALL BE PENALISED
@@ -747,9 +1084,15 @@ class SubmitReturn extends Component {
                     <span style={{ fontWeight: "bold" }}>
                       DECLARATION:
                     </span>{" "}
-                    I declare that the particulars in this return are
-                    correct and complete in accordance with the provisions
-                    of Value Added Tax CAP VI LFN, 2004 as amended
+                    <span
+                      style={{
+                        fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                      }}
+                    >
+                      I declare that the particulars in this return are
+                      correct and complete in accordance with the provisions
+                      of Value Added Tax CAP VI LFN, 2004 as amended.{" "}
+                    </span>
                   </td>
                 </tr>
                 <tr>
@@ -826,14 +1169,29 @@ class SubmitReturn extends Component {
                 </tr>
                 <tr>
                   <td colspan="20" className="text-center">
-                    <button
-                      type="button"
-                      className="btn btn-success btn-block"
-                      data-toggle="modal"
-                      data-target="#exampleModalCenter"
-                    >
-                      Submit
-                    </button>
+                    {" "}
+                    <button onClick={this.onOpenModal} className= 'btn btn-secondary btn-block'>Submit</button>
+                    {/* MODALS */}
+                    <div>
+                      <Modal open={open} onClose={this.onCloseModal} center>
+                        <div
+                          className="container"
+                          style={{ padding: "60px" }}
+                        >
+                          <h2>
+                            Pay by{" "}
+                            <Link to="/card" style={{ color: "blue" }}>
+                              Card{" "}
+                            </Link>
+                            or{" "}
+                            <Link to="/account" style={{ color: "blue" }}>
+                              Account
+                            </Link>{" "}
+                          </h2>
+                        </div>
+                      </Modal>
+                    </div>
+                    {/* MODALS */}
                   </td>
                 </tr>
               </tbody>

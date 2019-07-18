@@ -6,7 +6,6 @@ import './template/scripts/css/main.css';
 import './template/scripts/css/main1.css';
 import './template/scripts/css/main2.css';
 
-
 import './template/scripts/css/animation.css';
 import './template/scripts/css/responsiveness.css';
 import './template/scripts/js/main';
@@ -26,3 +25,8 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+
+
+
+

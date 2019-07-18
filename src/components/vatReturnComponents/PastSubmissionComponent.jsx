@@ -15,13 +15,34 @@ class PastSubmissionComponent extends Component {
 
 
 const PsC = (
-  <div class="container" style={{ height: "75vh" }}>
+  <div
+    class="container"
+    style={{
+      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+      height: "75vh"
+    }}
+  >
     <h4 className="text-center">Your past VAT submissions</h4>
-    <div className="row" style={{ marginTop: "20px" }}>
-      <div className="col-sm">Submission Date</div>
-      <div className="col-sm">Period start</div>
-      <div className="col-sm">Period end</div>
-      <div className="col-sm">View</div>
+    <div
+      className="row"
+      style={{
+        fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+        marginTop: "20px"
+      }}
+    >
+      
+      <div className="col-sm" style={{
+        fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+      }}>Submission Date</div>
+      <div className="col-sm" style={{
+        fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+      }}>Period start</div>
+      <div className="col-sm" style={{
+        fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+      }}>Period end</div>
+      <div className="col-sm" style={{
+        fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+      }}>View</div>
     </div>
     <hr style={{ width: "100%", justifyContent: "center" }} />
   </div>

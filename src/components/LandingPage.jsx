@@ -19,7 +19,7 @@ class LandingPage extends Component {
           height: "100vh",
           marginBottom: "120px",
           marginLeft: "5%",
-          fontFamily: "Calibri"
+          fontFamily: ""
         }}
       >
         <div className="row">
@@ -29,8 +29,8 @@ class LandingPage extends Component {
             <br />
             <br />{" "}
             <p>
-              You'll be submitting your VAT return in no time. Set-up
-              takes about 2 minutes so let us get you to speed{" "}
+              You'll be submitting your VAT return in no time. Set-up takes
+              about 2 minutes so let us get you to speed{" "}
             </p>
             <br />
             <p>

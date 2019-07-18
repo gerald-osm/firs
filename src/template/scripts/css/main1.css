@@ -23,16 +23,28 @@
 
 /* Text colors */
 
-.text_color_white{
-    color: rgb(255, 255, 255);
+.text_color_white {
+  color: rgb(255, 255, 255);
 }
 
-.text_color_black{
+.text_color_black {
   color: rgb(204, 204, 204);
 }
 
 /* /text colors */
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
 /* Side Bar Style */
 
 div.sidebar {
@@ -43,10 +55,10 @@ div.sidebar {
   top: 0;
   left: 0;
   background: linear-gradient(
-  rgba(40, 228, 23, 0.876),
-   rgba(40, 228, 23, 0.876)
-   ),
-   url("");
+      rgba(40, 228, 23, 0.876),
+      rgba(40, 228, 23, 0.876)
+    ),
+    url("");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -63,7 +75,9 @@ div.sidebar {
   float: right;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 35px;
   height: 3px;
   background-color: rgb(255, 255, 255);
@@ -76,7 +90,9 @@ div.sidebar {
   transform: rotate(-45deg) translate(-9px, 6px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
@@ -84,13 +100,13 @@ div.sidebar {
 }
 
 .user_profile {
-    padding: 10px 15px;
-    height: 160px;
-    background: linear-gradient(
-  rgba(40, 228, 23, 0.158),
-  rgba(40, 228, 23, 0.158)
-   ),
-   url("");
+  padding: 10px 15px;
+  height: 160px;
+  background: linear-gradient(
+      rgba(40, 228, 23, 0.158),
+      rgba(40, 228, 23, 0.158)
+    ),
+    url("");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -99,19 +115,19 @@ div.sidebar {
 }
 
 .user_name {
-    position: absolute;
-    bottom: 0;
-    color: rgb(10, 68, 14);
+  position: absolute;
+  bottom: 0;
+  color: rgb(10, 68, 14);
 }
 
 .user_profile span {
-    font-size: 10px;
-    background-color: rgb(15, 73, 10);
-    color: white;
-    padding: 2px 3px;
-    border-radius: 6px;
-    text-align: center;
-    align-content: center;
+  font-size: 10px;
+  background-color: rgb(15, 73, 10);
+  color: white;
+  padding: 2px 3px;
+  border-radius: 6px;
+  text-align: center;
+  align-content: center;
 }
 
 .sidebar hr {
@@ -123,7 +139,7 @@ div.sidebar {
 .dashboard_header {
   margin: 20px 0 10px 0;
   padding: 6px 5px;
-  background-color: rgba(19, 41, 15, 0.349);   
+  background-color: rgba(19, 41, 15, 0.349);
 }
 
 .dashboard_header h6 {
@@ -131,10 +147,10 @@ div.sidebar {
 }
 
 .side_bar_ul > li > a {
-color: rgb(255, 255, 255);
-text-decoration: none;
-/* padding: 3px 0; */
-display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  /* padding: 3px 0; */
+  display: block;
 }
 
 .side_bar_dropdown_list {
@@ -145,5 +161,3 @@ display: block;
 }
 
 /* Ende of SideBar style */
-
-

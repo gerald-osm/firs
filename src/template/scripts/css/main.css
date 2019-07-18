@@ -5,6 +5,20 @@
 body {
     padding: 0px;
     margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fafafa;
+} */
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }
 
 :root {

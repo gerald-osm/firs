@@ -16,7 +16,7 @@ class DashboardContent extends Component {
           
             <p
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "20px",
                 color: "black"
               }}
@@ -26,7 +26,7 @@ class DashboardContent extends Component {
             </p>
             <p
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "20px",
                 color: "black"
               }}
@@ -38,7 +38,7 @@ class DashboardContent extends Component {
             <br />
             <Link
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "17px"
               }}
               to="/returns"
@@ -49,7 +49,7 @@ class DashboardContent extends Component {
             <br />
             <Link
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "17px"
               }}
               to="/pastsubmissions"
@@ -60,7 +60,7 @@ class DashboardContent extends Component {
             <br />
             <Link
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "17px"
               }}
               to="/liabilities"
@@ -71,7 +71,7 @@ class DashboardContent extends Component {
             <br />
             <Link
               style={{
-                fontFamily: "calibri",
+                fontFamily: "Verdana",
                 fontSize: "17px"
               }}
               to="/payments"

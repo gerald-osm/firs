@@ -15,11 +15,22 @@ class LoginUser extends Component {
     const loginUser = (
       <div>
         <section>
-          <div className="container login_container">
+          <div
+            className="container login_container"
+            style={{
+              fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+            }}
+          >
             <div className="row">
               <div className=" col-sm-4 col-offset-8 rounded p-4 mx-auto text-center page_desc">
                 <h3>
-                  <small>Login to your TIN account</small>
+                  <small
+                    style={{
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif"
+                    }}
+                  >
+                    Login to your VAT account
+                  </small>
                 </h3>
               </div>
             </div>

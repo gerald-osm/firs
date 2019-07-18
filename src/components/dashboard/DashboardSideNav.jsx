@@ -15,10 +15,18 @@ class UserDashBoardSideNavigation extends Component {
         <div className="dashboard_header text_color_black">
           <h6>
             {" "}
-              <Link to="/user-dashboard" style={{color:'white', fontSize:'30px', margin: 'auto', paddingLeft:'20px'}}>
-                <i class="fas fa-tachometer-slowest" /> Dashboard{" "}
-              </Link>
-           
+            <Link
+              to="/user-dashboard"
+              style={{
+                fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                color: "white",
+                fontSize: "30px",
+                margin: "auto",
+                paddingLeft: "20px"
+              }}
+            >
+              <i class="fas fa-tachometer-slowest" /> Dashboard{" "}
+            </Link>
           </h6>
         </div>
 
@@ -43,7 +51,11 @@ class UserDashBoardSideNavigation extends Component {
                 {/* <a href="#">Submit a return</a>{" "} */}
                 <Link
                   to="/returns"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Submit a return
                 </Link>{" "}
@@ -53,7 +65,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="/pastsubmissions"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Past Submissions
                 </Link>{" "}
@@ -62,7 +78,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="/liabilities"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Liabilities
                 </Link>{" "}
@@ -71,7 +91,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="/payments"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Payments
                 </Link>{" "}
@@ -80,7 +104,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="#"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   How To: Tutorials
                 </Link>{" "}
@@ -100,14 +128,26 @@ class UserDashBoardSideNavigation extends Component {
                 className="fas fa-coins"
                 id="iconss"
               />
-              <span style={{ color: "white" }}> YOUR ACCOUNT</span>
+              <span
+                style={{
+                  fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                  color: "white"
+                }}
+              >
+                {" "}
+                YOUR ACCOUNT
+              </span>
             </a>
             <ul className="collapse list-unstyled" id="pageSubmenu">
               <li>
                 {" "}
                 <Link
                   to="#"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Account Settings
                 </Link>{" "}
@@ -116,7 +156,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="#"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Your Companies
                 </Link>{" "}
@@ -125,7 +169,11 @@ class UserDashBoardSideNavigation extends Component {
                 {" "}
                 <Link
                   to="#"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Upgrade Today
                 </Link>{" "}
@@ -145,14 +193,26 @@ class UserDashBoardSideNavigation extends Component {
                 class="fas fa-tty"
                 id="iconss"
               />
-              <span style={{ color: "white" }}> Support portal </span>
+              <span
+                style={{
+                  fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                  color: "white"
+                }}
+              >
+                {" "}
+                Support portal{" "}
+              </span>
             </a>
             <ul className="collapse list-unstyled" id="pagSubmenu">
               <li>
                 {" "}
                 <Link
                   to="#"
-                  style={{ color: "white", textDecoration: "none" }}
+                  style={{
+                    fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                    color: "white",
+                    textDecoration: "none"
+                  }}
                 >
                   Contact Support
                 </Link>{" "}
@@ -167,13 +227,25 @@ class UserDashBoardSideNavigation extends Component {
         </div>
         <ul className="list-unstyled components">
           <li>
-            <Link to="/" style={{ color: "white" }}>
+            <Link
+              to="/"
+              style={{
+                fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                color: "white"
+              }}
+            >
               <i className="fas fa-home" id="iconss" />
               <span>Home</span>
             </Link>
           </li>
           <li>
-            <Link to="#" style={{ color: "white" }}>
+            <Link
+              to="#"
+              style={{
+                fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                 color: "white"
+              }}
+            >
               <i className="fa fa-male" id="iconss" />
               <span>About</span>
             </Link>
